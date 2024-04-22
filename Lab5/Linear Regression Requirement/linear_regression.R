@@ -6,7 +6,7 @@ x <- runif(100, 0, 10)     # 100 draws between 0 & 10
 
 #(Q1) Try changing the value of standard deviation (sd) in the next command 
 #How do the data points change for different values of standard deviation?
-y <- 5 + 6*x + rnorm(100, sd = 0.2)  # default values for rnorm (mean = 0 and sigma = 1)
+y <- 5 + 6*x + rnorm(100, sd = 20)  # default values for rnorm (mean = 0 and sigma = 1)
 
 #Plot it
 plot (x,y)
@@ -15,7 +15,7 @@ plot (x,y)
 # OLS : Ordinary Least Squares
 model1 <- lm(y ~ x)
 # Learn about this object by saying ?lm and str(d)
-
+?lm
 # Compact model results
 print(model1)
 #(Q2) How are the coefficients of the linear model affected by changing the value

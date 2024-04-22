@@ -137,3 +137,4 @@ newdata4 <- data.frame (Age= round(runif(10,min(Mydata$Age),max(Mydata$Age))),
                         Price = round((runif(10,10,30)/10))*10)
 newdata4$Prob <- predict(mylogit,newdata=newdata4,type="response")
 newdata4
+

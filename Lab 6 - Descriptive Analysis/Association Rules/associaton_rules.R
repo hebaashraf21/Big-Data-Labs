@@ -1,3 +1,7 @@
+# Donia Gameel  1_24
+# Heba Ashraf   2_32
+
+
 # Install the arules and arulesViz packages
 install.packages("arules")
 install.packages("arulesViz")
@@ -63,27 +67,17 @@ plot(rules, shading = "lift")
 
 
 
-#The most interesting rules are rules with high confidence, support, and lift.
-#Examples:
+# the most interesting rules that are likely to provide real business value and insights are those with high lift values. 
+# Lift measures how much more likely the consequent (rhs) is, given the antecedent (lhs), compared to if the two were independent.
 
-#[1] High Confidence Rule: {item15, item49, item56} => {item30}
-
-# Confidence: 1.0000000  Support: 0.0101  Lift: 3.022975
-# This rule suggests that if items 15, 49, and 56 are purchased together,
-# there is a high likelihood that item 30 will also be purchased. This could indicate a specific product bundle or promotional strategy.
-
-
-#[2] High Support Rule: {item5} => {item13}
-
-# Confidence: 0.5074344  Support: 0.1877 Lift: 1.025534
-# This rule indicates that item 5 and item 13 are frequently purchased together,
-# which could inform product placement or marketing strategies.
-
-#[3] High Lift Rule: {item15, item30, item56} => {item49}
-# Confidence: 0.7709924  Support: 0.0101  Lift: 19.42046
-# This rule suggests a strong association between items 15, 30, and 56 leading to the purchase of item 49. This could be valuable for cross-selling or product bundling strategies.
-
-
+#Looking at the rules sorted by lift:
+  
+#{item15, item30, item56} => {item49} with lift 19.42
+#{item30, item56, item84} => {item49} with lift 18.66
+#{item15, item30, item49} => {item56} with lift 16.58
+#{item15, item56} => {item49} with lift 15.42
+#{item15, item49} => {item56} with lift 14.88
+#{item30, item49, item84} => {item56} with lift 13.79
 
 
 
